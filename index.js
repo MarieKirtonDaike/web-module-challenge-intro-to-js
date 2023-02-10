@@ -20,8 +20,13 @@ Do the following:
    HINT: no function required
 */
 
-
-
+let votingAge = 10
+if (votingAge < 18){
+  console.log("false");
+}
+if (votingAge>=18){
+  console.log("true")
+}
 /*
 Task 1b - Values (not auto tested)
 
@@ -33,8 +38,14 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let firstThing = 6
+let secondThing = 5
+if (firstThing === secondThing){
+  console.log("true");
+}
+else{
+  console.log(firstThing)
+}
 
 
 
@@ -48,7 +59,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let year = "1999"
+year = 1999
+console.log (year)
 
 
 
@@ -64,7 +77,7 @@ Do the following:
 function multiply(num1, num2){
   return num1 * num2;
 }
-
+console.log(multiply(3,7))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -77,10 +90,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(humanYear){
+  return humanYear*7
 }
-
+console.log(dogYears(6))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -156,12 +169,47 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user, computer){
-  /*add your code here*/
-}
-
-
-
+function game(computer){
+  computer = (Math.random())
+  if (computer < 0.4){
+   return "rock";
+  }
+  if (computer > 0.7){
+   return"paper";
+  }
+ else{
+   return "scissors"
+ }
+ 
+ }
+ let comp = game()
+ function gamematch(user, comp){
+ if (user === comp){
+ console.log("it's a tie")
+ }
+ if (user==="rock" && comp === "scissors"){ 
+ console.log("you win!")
+ }
+ else if (user==="paper" && comp === "rock"){ 
+   console.log("you win!")
+   }
+ else if (user==="scissors" && comp === "paper"){ 
+     console.log("you win!")
+  }
+ else if (comp==="rock" && user === "scissors"){ 
+ console.log("you win!")
+ }
+ else if (comp==="paper" && user === "rock"){ 
+   console.log("you win!")
+   }
+ else if (comp==="scissors" && user === "paper"){ 
+     console.log("you win!")
+  }
+   }
+ 
+ gamematch("rock", comp)
+ 
+ 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Metric Converter 
@@ -207,10 +255,14 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
-}
-
+function annoyingSong(num){ 
+  num = num +1
+  for (let i = 0 ; i <= num ; i++) {
+    num = num-1;
+    console.log(`${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num - 1} bottles of soda on the wall`);
+  }
+  }
+  annoyingSong(3)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -227,10 +279,25 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  if (score <60){
+    return "you got an F"
+  }
+  else if (score < 70){
+    return "you got a D"
+  }
+  else if (score < 80){
+    return "you got a C"
+  }
+  else if (score < 90){ 
+  return "you got a B"
 }
+  else if (score <= 100){
+    return "you got an A"
+  }
 
+}
+console.log(grade(78))
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
