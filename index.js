@@ -142,8 +142,35 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+console.log(hungryDog(4,.75))
+
+
+function hungryDog(weight, age){
+  if (age >= 1 ){
+    if (weight <=5){
+      return weight*.05;
+    }
+    else if (weight <=10){ 
+    return weight * .04;
+    }
+    else if (weight <=15){
+      return weight * .03;
+    }
+    else if (weight >15){
+      return weight * .02;
+    }
+  }
+  if (age<1){
+    if (age < .30 ){
+      return weight * .10;
+    }
+    else if (age < .58 ){
+      return weight * .05;
+    }
+    else if (age < 1 ){
+      return weight * .04;
+    }
+  }
 }
 
 
@@ -169,7 +196,7 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(computer){
+function gamematch(computer){
   computer = (Math.random())
   if (computer < 0.4){
    return "rock";
@@ -183,31 +210,31 @@ function game(computer){
  
  }
  let comp = game()
- function gamematch(user, comp){
+ function game(user, comp){
  if (user === comp){
- console.log("it's a tie")
+ return ("it's a tie")
  }
  if (user==="rock" && comp === "scissors"){ 
- console.log("you win!")
+ return ("you win!")
  }
  else if (user==="paper" && comp === "rock"){ 
-   console.log("you win!")
+   return("you win!")
    }
  else if (user==="scissors" && comp === "paper"){ 
-     console.log("you win!")
+     return ("you win!")
   }
  else if (comp==="rock" && user === "scissors"){ 
- console.log("you win!")
+ return ("you lose!")
  }
  else if (comp==="paper" && user === "rock"){ 
-   console.log("you win!")
+   return ("you lose!")
    }
  else if (comp==="scissors" && user === "paper"){ 
-     console.log("you win!")
+     return ("you lose!")
   }
    }
  
- gamematch("rock", comp)
+console.log(game("rock", comp))
  
  
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -221,10 +248,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilo){
+  return kilo * .621371
 }
-
+console.log(miles(1))
 
 
 //Task 5b - Centimeters to Feet
@@ -235,10 +262,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48
 }
-
+console.log(feet(1))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -259,10 +286,10 @@ function annoyingSong(num){
   num = num +1
   for (let i = 0 ; i <= num ; i++) {
     num = num-1;
-    console.log(`${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num - 1} bottles of soda on the wall`);
+    return (`${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num - 1} bottles of soda on the wall`);
   }
   }
-  annoyingSong(3)
+   annoyingSong(3)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -313,10 +340,15 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(str){
+  for (let i = 0; i < str.length; i ++){
+const vowels = ["a" ,"e" ,"i", "o" ,"u"];
+let count = 0 ;
+if (str === vowels){
+  return count ++ 
 }
-
+}
+}
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
