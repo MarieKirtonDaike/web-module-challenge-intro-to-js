@@ -324,7 +324,7 @@ function grade(score){
   }
 
 }
-console.log(grade(78))
+console.log(grade(30))
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
@@ -341,13 +341,7 @@ HINT - try looking up the .includes() method
 
 
 function vowelCounter(str){
-  for (let i = 0; i < str.length; i ++){
-const vowels = ["a" ,"e" ,"i", "o" ,"u"];
-let count = 0 ;
-if (str === vowels){
-  return count ++ 
-}
-}
+  
 }
 
 
