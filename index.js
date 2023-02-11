@@ -340,9 +340,17 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(str){
-  
+function vowelCounter(str) {
+  vowels = ["a", "e" ,"i", "o", "u"];
+  vowelCount = 0
+  for (let char of str) {
+   if (vowels.includes(char)){
+  vowelCount++;
+     
+   }
+  }console.log(vowelCount);
 }
+vowelCounter("bibitybobityboo")
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
