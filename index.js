@@ -341,8 +341,8 @@ HINT - try looking up the .includes() method
 
 
 function vowelCounter(str) {
-  vowels = ["a", "e" ,"i", "o", "u"];
-  vowelCount = 0
+  let vowels = ["a", "e" ,"i", "o", "u"];
+  let vowelCount = 0
   for (let char of str) {
    if (vowels.includes(char)){
   vowelCount++;
